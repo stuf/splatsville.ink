@@ -1,3 +1,5 @@
+import clsx from 'clsx';
+
 import css from '@/styles/Cappy.module.css';
 
 export default function CappyPage() {
@@ -8,32 +10,55 @@ export default function CappyPage() {
           <header>name</header>
 
           <section>
-            <aside>
+            <aside className="space-y-4">
               <section>
                 <header>Colors</header>
+
+                <dl className={clsx(css.spec)}>
+                  <div>
+                    <dt>Hair</dt>
+                    <dd className={clsx(css.color, 'bg-[#435bf3]')}></dd>
+                  </div>
+
+                  <div>
+                    <dt>Eyes</dt>
+                    <dd className={clsx(css.color)}></dd>
+                  </div>
+
+                  <div>
+                    <dt>Skin</dt>
+                    <dd className={clsx(css.color)}></dd>
+                  </div>
+                </dl>
               </section>
 
               <section>
                 <header>Gear</header>
 
-                <dl>
+                <dl className={clsx(css.spec)}>
                   <div>
                     <dt>Head</dt>
-                    <dd>first</dd>
+                    <dd className={clsx(css.big)}>first</dd>
                   </div>
 
                   <div>
                     <dt>Clothes</dt>
-                    <dd>second</dd>
+                    <dd className={clsx(css.big)}>second</dd>
                   </div>
 
                   <div>
                     <dt>Shoes</dt>
-                    <dd>third</dd>
+                    <dd className={clsx(css.big)}>third</dd>
                   </div>
                 </dl>
               </section>
             </aside>
+          </section>
+
+          <section>
+            <header>LORE OMG</header>
+
+            <div>LORE M IPSUM TO BE CONTINUED</div>
           </section>
         </article>
       </div>

@@ -1,3 +1,22 @@
 .root {
   @apply border-2 border-red-500;
 }
+
+.spec {
+  @apply divide-y-2;
+}
+
+.spec dt {
+  @apply uppercase;
+  @apply font-extrabold;
+  @apply text-sm;
+}
+
+.color {
+  @apply border-2 border-red-500;
+  @apply w-12 h-12;
+}
+
+.big {
+  @apply text-4xl;
+}
