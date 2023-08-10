@@ -1,0 +1,19 @@
+.body {
+  --blue: #003153;
+  --white: #fff;
+
+  height: 100%;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.display {
+  /* @apply font-mono; */
+  @apply items-center;
+  @apply fixed;
+  @apply left-1/2;
+  @apply top-1/2;
+  @apply -translate-x-1/2 -translate-y-1/2;
+
+  font-size: 10vmin;
+}
