@@ -7,7 +7,8 @@ import css from '@/styles/lab/Countdown.module.css';
 export default function CountdownPage() {
   const [state, setState] = useState({
     start: new Date(),
-    end: new Date(2023, 7, 24, 6, 40, 0),
+    end: new Date(2024, 1, 10, 6, 40, 0),
+    // end: new Date(2023, 7, 24, 6, 40, 0),
   });
 
   const dur = useMemo(() => intervalToDuration(state), [state]);
@@ -22,7 +23,7 @@ export default function CountdownPage() {
     };
   });
 
-  const s = [dur.days, dur.hours, dur.minutes, dur.seconds].map(x =>
+  const s = [dur.months, dur.days, dur.hours, dur.minutes, dur.seconds].map(x =>
     `${x}`.padStart(2, '0'),
   );
 
