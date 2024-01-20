@@ -10,7 +10,15 @@ export default function CappyPage() {
           <header>name</header>
 
           <section>
+<<<<<<< Updated upstream
             <aside className="space-y-4">
+=======
+            {/* Big header intro section / image gallery */}
+          </section>
+
+          <section>
+            <aside>
+>>>>>>> Stashed changes
               <section>
                 <header>Colors</header>
 

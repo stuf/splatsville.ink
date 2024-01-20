@@ -15,5 +15,5 @@
   @apply top-1/2;
   @apply -translate-x-1/2 -translate-y-1/2;
 
-  font-size: 10vmin;
+  /* font-size: 10vmin; */
 }

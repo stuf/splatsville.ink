@@ -1,8 +1,10 @@
 import clsx from 'clsx';
-import { useEffect, useMemo, useState } from 'react';
+import { Fragment, useEffect, useMemo, useState } from 'react';
 import { intervalToDuration, formatDuration } from 'date-fns';
 
 import css from '@/styles/lab/Countdown.module.css';
+
+const pluralize = (n, s, p) => (n === 1 ? s : p);
 
 export default function CountdownPage() {
   const [state, setState] = useState({
@@ -27,10 +29,24 @@ export default function CountdownPage() {
     `${x}`.padStart(2, '0'),
   );
 
+  const xs = [
+    [dur.days, 'day', 'days'],
+    [dur.hours, 'hour', 'hours'],
+    [dur.minutes, 'minute', 'minutes'],
+    [dur.seconds, 'second', 'seconds'],
+  ];
+
   return (
     <div className={clsx(css.body)}>
       <div className={clsx(css.display)}>
-        <code>{s.join(':')}</code>
+        <div className="text-3xl grid grid-cols-2 items-end gap-4 gap-y-8">
+          {xs.map(([n, s, p], ix) => (
+            <Fragment key={ix}>
+              <div className="text-8xl text-right">{n}</div>
+              <div>{pluralize(n, s, p)}</div>
+            </Fragment>
+          ))}
+        </div>
       </div>
     </div>
   );
