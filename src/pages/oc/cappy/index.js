@@ -10,7 +10,7 @@ export default function CappyPage() {
           <header>name</header>
 
           <section>
-            <aside className="space-y-4">
+            <aside className="space-y-4"></aside>
             {/* Big header intro section / image gallery */}
           </section>
 
